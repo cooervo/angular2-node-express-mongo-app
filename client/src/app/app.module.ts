@@ -32,7 +32,7 @@ import {MaterialModule} from "@angular/material";
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
-        DataService
+        DataService,
     ],
     bootstrap: [AppComponent]
 })

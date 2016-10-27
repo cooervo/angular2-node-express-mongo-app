@@ -1,5 +1,5 @@
 import {Injectable} from '@angular/core';
-import {Http, Response, RequestOptionsArgs} from "@angular/http";
+import {Http, Response, RequestOptionsArgs, Headers} from "@angular/http";
 import {Observable} from "rxjs";
 
 @Injectable()
@@ -14,8 +14,9 @@ export class DataService {
             .catch(this.handleError);
     }
 
-    public postData(url: string, body, options?: RequestOptionsArgs): Observable<Response> {
-        return this.http.post(url, body, options)
+    public postData(url: string, body, headers?): Observable<Response> {
+
+        return this.http.post(url, body, headers)
             .map(this.extractData)
             .catch(this.handleError);
     }

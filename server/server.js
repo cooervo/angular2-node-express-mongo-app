@@ -29,10 +29,10 @@ mongoose.connect('mongodb://localhost/motious_db');
 var useCaseSchema = mongoose.Schema({
         title: String,
         body: String,
-        fizz: Number,
     },
     {collection: "use_cases"}
 );
+
 
 // Compile into model
 var UseCase = mongoose.model("UseCase", useCaseSchema);
@@ -52,15 +52,15 @@ expressApp
 
     })
 
-    .get("/case/:id", function (req, res) {
-
-    })
 
     .post("/case", function (req, res) {
-        console.log("/case")
-        console.log(req)
-        console.log(res)
-        res.send("Wooot")
+        console.log("req", req.body);
+            UseCase.create(req.body, function (err, results) {
+                console.log("err", err)
+                console.log("results", results)
+            });
+
+        res.json("Wooot")
     })
 
 ;
