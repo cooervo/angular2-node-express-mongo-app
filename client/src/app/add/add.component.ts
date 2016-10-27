@@ -1,9 +1,8 @@
 import {Component} from "@angular/core";
 import {DataService} from "../shared/data.service";
 import {Config} from "../shared/strings";
-import {Headers, Http, Response} from "@angular/http";
+import {Headers, Http} from "@angular/http";
 import {error} from "util";
-import {Observable} from "rxjs";
 
 @Component({
     selector: "add",
