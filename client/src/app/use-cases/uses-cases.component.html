@@ -1,0 +1,9 @@
+<h1>Uses Cases</h1>
+<p>Welcome to Angular Seed</p>
+
+<ul>
+  <li *ngFor="let useCase of useCases">
+    <h3>{{useCase?.title || '--'}}</h3>
+    <p [innerHtml]="useCase?.body || '--'"></p>
+  </li>
+</ul>
