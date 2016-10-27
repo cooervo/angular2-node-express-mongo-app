@@ -23,7 +23,8 @@ import {UseCaseComponent} from "./use-cases/use-case/use-case.component";
         FormsModule,
         HttpModule,
         RouterModule.forRoot(routeConfig),
-        MaterialModule.forRoot()
+        MaterialModule.forRoot(),
+        
     ],
     providers: [
         DataService,

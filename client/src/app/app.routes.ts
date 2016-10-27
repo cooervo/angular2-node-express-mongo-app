@@ -5,15 +5,9 @@ import {UseCaseComponent} from "./use-cases/use-case/use-case.component";
 
 export const routeConfig: Routes = [
     {path: '', redirectTo: 'use-cases', pathMatch: 'full'},
-    {path: 'use-cases', component: UseCasesComponent,
-        children: [
-            {
-                path: '/:id',
-                component: UseCaseComponent,
-            }
-        ]
-    },
+    {path: 'use-cases', component: UseCasesComponent},
     {path: 'add', component: AddComponent},
+    {path: 'use-case/:id', component: UseCaseComponent},
     {path: '**', redirectTo: 'use-cases'},
 ];
 

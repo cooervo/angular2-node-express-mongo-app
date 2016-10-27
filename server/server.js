@@ -52,6 +52,21 @@ expressApp
 
     })
 
+    .get("/cases/:id", function (req, res) {
+
+        let id = req.params.id;
+        console.log(the_id);
+
+        UseCase.find({}).exec().then(function (results) {
+                res.json(results);
+
+            }
+        ).catch(function (err) {
+            console.log("error", err)
+        });
+
+    })
+
 
     .post("/case", function (req, res) {
         console.log("req", req.body);

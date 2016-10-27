@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {DataService} from "../shared/data.service";
 import {Config} from "../shared/strings";
+import {UseCaseVO} from "./use-case.models";
 
 @Component({
     selector: 'use-cases',
@@ -9,7 +10,7 @@ import {Config} from "../shared/strings";
 })
 export class UseCasesComponent implements OnInit {
 
-    public useCases;
+    public useCases: UseCaseVO[];
 
     constructor(private dataService: DataService) {
     }
@@ -20,7 +21,7 @@ export class UseCasesComponent implements OnInit {
 
         this.dataService.getData(url).subscribe(
             data => {
-                this.useCases = data;
+                this.useCases = <UseCaseVO[]>data;
             },
             error => {
                 console.log(error);
