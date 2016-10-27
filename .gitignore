@@ -6,4 +6,4 @@
 /server/node_modules/
 
 # Ingore from client
-/client/node_modules
+/client/node_modules/
