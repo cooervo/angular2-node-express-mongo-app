@@ -7,8 +7,15 @@ $app-secondary: rgb(125, 134, 148);
 // Dimensions
 $max-width: 1200px;
 
+// Utilities
+$font-app: 'Lato', sans-serif;
+
 // mixins
 @mixin centerer(){
   width: $max-width;
   margin: 0 auto;
+
+}@mixin font-app($weight){
+  font-family: $font-app;
+  font-weight: $weight;
 }

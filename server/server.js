@@ -54,8 +54,13 @@ expressApp
 
     .get("/case/:id", function (req, res) {
 
+    })
 
-
+    .post("/case", function (req, res) {
+        console.log("/case")
+        console.log(req)
+        console.log(res)
+        res.send("Wooot")
     })
 
 ;

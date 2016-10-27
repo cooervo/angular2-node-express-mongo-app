@@ -1,26 +1,31 @@
 import {Component, OnInit} from '@angular/core';
-import {UseCaseService} from "../shared/use-case.service";
+import {DataService} from "../shared/data.service";
+import {Config} from "../shared/strings";
 
 @Component({
-  selector: 'my-use-cases',
-  styleUrls: ['use-cases.component.scss'],
-  templateUrl: 'uses-cases.component.html',
+    selector: 'use-cases',
+    styleUrls: ['use-cases.component.scss'],
+    templateUrl: 'uses-cases.component.html',
 })
-export class UseCasesComponent implements OnInit{
+export class UseCasesComponent implements OnInit {
 
-  public useCases;
+    public useCases;
 
-  constructor(private useCaseService: UseCaseService){ }
+    constructor(private dataService: DataService) {
+    }
 
-  ngOnInit(): void {
-    this.useCaseService.getData().subscribe(
-      data => {
-        this.useCases = data;
-      },
-      error => {
-        console.log(error);
+    ngOnInit(): void {
 
-      }
-    );
-  }
+        let url = Config.baseUrl + Config.cases;
+
+        this.dataService.getData(url).subscribe(
+            data => {
+                this.useCases = data;
+            },
+            error => {
+                console.log(error);
+
+            }
+        );
+    }
 }

@@ -4,20 +4,20 @@ import {rootRouterConfig} from "./app.routes";
 import {AppComponent} from "./app.component";
 import {FormsModule} from "@angular/forms";
 import {HttpModule} from "@angular/http";
-import {AboutComponent} from './about/about.component';
+import {AddComponent} from './add/add.component';
 import {UseCasesComponent} from './use-cases/use-cases.component';
 import {RepoBrowserComponent} from './github/repo-browser/repo-browser.component';
 import {RepoListComponent} from './github/repo-list/repo-list.component';
 import {RepoDetailComponent} from './github/repo-detail/repo-detail.component';
 import {LocationStrategy, HashLocationStrategy} from '@angular/common';
-import {UseCaseService} from "./shared/use-case.service";
+import {DataService} from "./shared/data.service";
 import {BrowserModule} from '@angular/platform-browser';
 import {MaterialModule} from "@angular/material";
 
 @NgModule({
     declarations: [
         AppComponent,
-        AboutComponent,
+        AddComponent,
         RepoBrowserComponent,
         RepoListComponent,
         RepoDetailComponent,
@@ -32,7 +32,7 @@ import {MaterialModule} from "@angular/material";
     ],
     providers: [
         {provide: LocationStrategy, useClass: HashLocationStrategy},
-        UseCaseService
+        DataService
     ],
     bootstrap: [AppComponent]
 })

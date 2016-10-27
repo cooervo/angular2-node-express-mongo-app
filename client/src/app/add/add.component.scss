@@ -1,0 +1,26 @@
+@import "../../../styles/app-styles.scss";
+
+.add {
+  background: $app-secondary;
+  div {
+    text-align: center;
+    md-card {
+      height: 350px;
+      @include centerer();
+      width: 900px;
+
+      margin: 0 auto;
+
+      md-input {
+        display: block;
+        max-width: 200px;
+        margin: auto;
+      }
+    }
+
+    .card-box {
+      margin: auto;
+    }
+  }
+
+}
