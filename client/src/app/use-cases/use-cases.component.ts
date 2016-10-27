@@ -3,8 +3,8 @@ import {UseCaseService} from "../shared/use-case.service";
 
 @Component({
   selector: 'my-use-cases',
-  styleUrls: ['use-cases.component.css'],
-  templateUrl: 'uses-cases.component.html'
+  styleUrls: ['use-cases.component.scss'],
+  templateUrl: 'uses-cases.component.html',
 })
 export class UseCasesComponent implements OnInit{
 

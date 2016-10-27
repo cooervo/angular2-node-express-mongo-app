@@ -10,7 +10,8 @@
     "moduleResolution": "node",
      "types": [
        "core-js",
-       "node"
+       "node",
+       "hammerjs"
      ]
   },
   "exclude": [

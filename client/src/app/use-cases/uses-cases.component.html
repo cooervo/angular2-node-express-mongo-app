@@ -1,9 +1,10 @@
-<h1>Uses Cases</h1>
-<p>Welcome to Angular Seed</p>
+<section class="use-cases container">
+    <h1>Uses Cases</h1>
+    <ul>
+        <md-card class="use-case-box" *ngFor="let useCase of useCases">
+            <md-card-title>{{useCase?.title || '--'}}</md-card-title>
+            <md-card-content [innerHtml]="useCase?.body || '--'"></md-card-content>
+        </md-card>
+    </ul>
+</section>
 
-<ul>
-  <li *ngFor="let useCase of useCases">
-    <h3>{{useCase?.title || '--'}}</h3>
-    <p [innerHtml]="useCase?.body || '--'"></p>
-  </li>
-</ul>

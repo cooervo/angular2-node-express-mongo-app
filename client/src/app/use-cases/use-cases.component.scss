@@ -1,0 +1,10 @@
+@import "../../../styles/app-styles.scss";
+
+.use-cases{
+    background: $app-secondary;
+
+  .use-case-box{
+    margin: 20px;
+    background: rgb(250,250,250);
+  }
+}

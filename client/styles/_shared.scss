@@ -1,0 +1,14 @@
+
+// colors:
+$app-background: rgb(250, 256, 267);
+$app-main: rgb(135, 143, 157);
+$app-secondary: rgb(125, 134, 148);
+
+// Dimensions
+$max-width: 1200px;
+
+// mixins
+@mixin centerer(){
+  width: $max-width;
+  margin: 0 auto;
+}
