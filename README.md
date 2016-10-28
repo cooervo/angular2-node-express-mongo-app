@@ -1,5 +1,7 @@
 # Fullstack MEAN app (with Angular 2):
 
+0) Clone or download repo.
+
 1) open console and cd into this current dir: 
 
      cd app
