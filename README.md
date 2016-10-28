@@ -1,4 +1,4 @@
-MEAN app (with Angular 2):
+# MEAN app (with Angular 2):
 
 1) open console and cd into this current dir: 
 
@@ -15,6 +15,6 @@ dependencies, then runs node server. Once node is running:
 
      npm start
 
-4) navigate app to: http://localhost:3000/
+4) navigate to: http://localhost:3000/
 
 5) Contact Mateo at cuervo.taylor@gmail.com ;) to hire me
