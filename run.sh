@@ -13,9 +13,14 @@ npm install
 echo "====> Server Dependencies installed!!!"
 
 echo "
+
      ******************** ACHTUNG!!! ********************
-     SERVER IS STARTING,
-     NOW GO IN NEW TERMINAL to app/client
-     and run: npm start"
+     Server is starting,
+     Now go in a *NEW* terminal to app/client:
+     cd app/client
+     and run: npm start
+     ****************************************************
+
+     "
 # Run node.js server file
 node server.js
