@@ -1,4 +1,4 @@
-# MEAN app (with Angular 2):
+# Fullstack MEAN app (with Angular 2):
 
 1) open console and cd into this current dir: 
 
