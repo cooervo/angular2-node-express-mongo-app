@@ -1,2 +1,6 @@
-<h1>Single use case</h1>
-<p>{{useCaseId}}</p>
+<h1>{{useCase.title}}</h1>
+<ul>
+    <li *ngFor="let milestone of useCase.milestones">
+        {{milestone.name}}
+    </li>
+</ul>

@@ -16,7 +16,7 @@ expressApp.use(bodyParser.urlencoded({
 }));
 expressApp.use(bodyParser.json());
 
-expressApp.use(function(req, res, next) {
+expressApp.use(function (req, res, next) {
     res.header("Access-Control-Allow-Origin", "*");
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
@@ -55,9 +55,8 @@ expressApp
     .get("/cases/:id", function (req, res) {
 
         let id = req.params.id;
-        console.log(the_id);
 
-        UseCase.find({}).exec().then(function (results) {
+        UseCase.findOne({_id: id}).exec().then(function (results) {
                 res.json(results);
 
             }
@@ -70,10 +69,10 @@ expressApp
 
     .post("/case", function (req, res) {
         console.log("req", req.body);
-            UseCase.create(req.body, function (err, results) {
-                console.log("err", err)
-                console.log("results", results)
-            });
+        UseCase.create(req.body, function (err, results) {
+            console.log("err", err)
+            console.log("results", results)
+        });
 
         res.json("Wooot")
     })
