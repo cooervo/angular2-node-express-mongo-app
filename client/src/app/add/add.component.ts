@@ -3,6 +3,7 @@ import {DataService} from "../shared/data.service";
 import {Config} from "../shared/strings";
 import {Headers, Http} from "@angular/http";
 import {error} from "util";
+import {Router} from "@angular/router";
 
 @Component({
     selector: "add",
@@ -12,31 +13,39 @@ import {error} from "util";
 export class AddComponent {
     public title: string;
     public body: string;
+    public isValid: boolean;
 
     constructor(private dataService: DataService,
-                private http: Http) {
+                private router: Router) {
         this.title = "";
         this.body = "";
+        this.isValid = true;
     }
 
     public addUseCase() {
 
-        let url = Config.baseUrl + Config.case;
-        console.log("url", url); // --> http://localhost:3001/case
+        if(this.validator()){
+            let url = Config.baseUrl + Config.case;
+            let headers = new Headers();
+            headers.append('Content-Type', 'application/json');
+            let body = JSON.stringify({title: this.title, body: this.body})
 
-        let headers = new Headers();
-        headers.append('Content-Type', 'application/json');
+            this.dataService.postData(url, body, {headers: headers}).subscribe(
+                data => {
+                    this.router.navigateByUrl('');
 
-        let body = JSON.stringify({title: this.title, body: this.body})
+                },
+                error => {
+                    console.log("error", error);
 
-        this.dataService.postData(url, body, {headers: headers}).subscribe(
-            data => {
-                console.log("data", data);
-            },
-            error => {
-                console.log("error", error);
+                }
+            );
 
-            }
-        );
+        }
+    }
+
+    private validator() {
+        this.isValid = this.title.length >= 1 && this.body.length >= 1;
+        return this.isValid;
     }
 }

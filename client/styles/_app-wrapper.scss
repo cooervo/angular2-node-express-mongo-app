@@ -1,14 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Lato:100,200,300,400,600,500,700,900');
 
 .app-wrapper {
-  background: $app-background;
-  margin: 0;
-  padding: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
   font-family: 'Lato', sans-serif;
 
   main{
@@ -16,11 +8,10 @@
   }
 
   header {
-    height: 50px;
+    height: 20px;
     width: 100%;
 
     div {
-    background: $app-main;
       height: 100px;
       @include centerer();
 
@@ -33,7 +24,7 @@
 
         a {
           padding: 15px 20px;
-          color: white;
+          color: black;
         }
       }
     }

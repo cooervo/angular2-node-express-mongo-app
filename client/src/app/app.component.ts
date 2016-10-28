@@ -6,4 +6,8 @@ import {Component} from "@angular/core";
   styleUrls: ["../../styles/app-styles.scss"]
 })
 export class AppComponent {
+
+
+
+
 }

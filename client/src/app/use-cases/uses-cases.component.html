@@ -1,9 +1,13 @@
 <section class="use-cases container">
     <ul>
-        <md-card class="card-box" *ngFor="let useCase of useCases; let i = index;"
-                 [routerLink]="['/use-case', useCase._id]">
+        <md-card class="card-box" *ngFor="let useCase of useCases; let i = index;">
             <md-card-title>Usecase {{i + 1}}: {{useCase?.title || '--'}}</md-card-title>
             <md-card-content [innerHtml]="useCase?.body || '--'"></md-card-content>
+            <md-card-actions
+                    [routerLink]="['/use-case', useCase?._id]"
+                    *ngIf="useCase?.milestones?.length >= 1">
+                <button md-raised-button color="primary">Open Milestones</button>
+            </md-card-actions>
         </md-card>
     </ul>
 </section>

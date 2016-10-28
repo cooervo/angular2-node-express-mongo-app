@@ -6,6 +6,7 @@
                 <md-input [(ngModel)]="title" placeholder="Title" align="end"></md-input>
                 <md-input [(ngModel)]="body" placeholder="Body" align="end"></md-input>
             </md-card-content>
+            <p *ngIf="!isValid">Data not valid</p>
             <md-card-actions>
                 <button md-raised-button color="primary" (click)="addUseCase()">ADD</button>
             </md-card-actions>

@@ -7,7 +7,7 @@ export class UseCaseVO{
 
 export class MilestonesVO{
     public name: string;
-    public startDate: Date;
-    public endDate: Date;
+    public start_date: Date;
+    public end_date: Date;
 
 }
